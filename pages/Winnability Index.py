@@ -67,7 +67,7 @@ tableau_html_1 = f"""
 st.components.v1.html(tableau_html_1, height=575)
 
 # Load the Excel file
-file_path = '/Users/elizabethlites/Desktop/Vscode Practice/SD Scoring Final.xlsx'
+file_path = 'Project_2030/Files/SD Scoring Final .xlsx'
 sheets_dict = pd.read_excel(file_path, sheet_name=None)
 
 st.subheader("Social Determinant Metrics and Lowest Scoring Counties by Category")
