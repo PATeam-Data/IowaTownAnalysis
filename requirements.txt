@@ -2,3 +2,7 @@ streamlit
 pandas
 openpyxl==3.1.2
 geopandas
+folium
+requests
+tempfile
+branca
