@@ -11,7 +11,7 @@ district = st.selectbox("Iowa General Assembly", ["Senate - Upper", "House - Low
 # Display different content based on the selected district
 if district == "House - Lower":
     st.write("Here is the analysis for House - Lower:")
-    tableau_url = "https://public.tableau.com/views/Project_2030_LH_17273272369200/Dashboard1"
+    lower_tableau_url = "https://public.tableau.com/views/Project_2030_LH_17273272369200/Dashboard1"
     # HTML code to embed Tableau with dynamic sizing
     lower_tableau_html = f"""
         <div class='tableauPlaceholder' id='viz1727469360505' style='position: relative'>
@@ -53,7 +53,7 @@ if district == "House - Lower":
 
 if district == "Senate - Upper":
     st.write("Here is the analysis for Senate - Upper:")   
-    tableau_url = "https://public.tableau.com/app/profile/bluebonnet.data/viz/Project_2030_UH_17273273216760/Dashboard1"
+    upper_tableau_url = "https://public.tableau.com/app/profile/bluebonnet.data/viz/Project_2030_UH_17273273216760/Dashboard1"
     # HTML code to embed Tableau with dynamic sizing
     upper_tableau_html = f"""
         <div class='tableauPlaceholder' id='viz1727469943966' style='position: relative'>

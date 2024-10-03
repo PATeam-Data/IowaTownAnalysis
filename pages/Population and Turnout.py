@@ -3,11 +3,11 @@ import streamlit as st
 st.title("Population Center Impact and Estimated Turnout")
 
 # This calculator is to visualize a win on a more granular scale between a population center and a district. 
-# The question we are trying to answer is: after calculating the overall impact of a population center/small town
+# The question we are trying to answer is: after calculating the overall impact of a population center
 # on a district, will it be enough to win the district to just focus on this town in 2030? We have calculated the projected
 # population and turnout rate of the district, taken from the District Analysis tab. 
 
-st.write("This calculator is to visualize a win on a more granular scale between a population center and a district. The question we are trying to answer is: after calculating the overall impact of a population center/small town. on a district, will it be enough to win the district to just focus on this town in 2030? We have calculated the projected population and turnout rate of the district, taken from the District Analysis tab. All entries should be full numbers.")
+st.write("This calculator is to visualize a win on a more granular scale between a population center and a district. The question we are trying to answer is: after calculating the overall impact of a population center/commununity on a district, will it be enough to win the district to just focus on this town in 2030? Communities are defined by the users, and can be any population center. We have calculated the projected population and turnout rate of the district, taken from the District Analysis tab. All entries should be full numbers.")
 year = st.selectbox("Year", ["2025", "2026","2027", "2028", "2029", "2030"])
 district = st.selectbox("District", ["Iowa State Senate 1", "Iowa State Senate 2", "Iowa State Senate 3", "Iowa State Senate 4", "Iowa State Senate 5", "Iowa State Senate 6", "Iowa State Senate 7",
                                      "Iowa State Senate 8", "Iowa State Senate 9", "Iowa State Senate 10", "Iowa State Senate 11", "Iowa State Senate 12", "Iowa State Senate 13", "Iowa State Senate 14", "Iowa State Senate 15",
@@ -28,8 +28,9 @@ district = st.selectbox("District", ["Iowa State Senate 1", "Iowa State Senate 2
                                      "Iowa State House 76", "Iowa State House 77", "Iowa State House 78", "Iowa State House 79", "Iowa State House 80", "Iowa State House 81", "Iowa State House 82", "Iowa State House 83", "Iowa State House 84",
                                      "Iowa State House 85", "Iowa State House 86", "Iowa State House 87", "Iowa State House 88", "Iowa State House 89", "Iowa State House 90", "Iowa State House 91", "Iowa State House 92", "Iowa State House 93",
                                      "Iowa State House 94", "Iowa State House 95", "Iowa State House 96", "Iowa State House 97", "Iowa State House 98", "Iowa State House 99", "Iowa State House 100"])
-city = st.text_input("City/Population Center Name:")
+city = st.text_input("Community/Population Center Name:")
 
+st.write("Numbers will be provided by the Projections Database.")
 
 # values
 st.subheader("District Information:")
@@ -38,7 +39,7 @@ dem_election_turnout_of_district = st.number_input(f"Projected Democratic Electi
 #total_election_turnout_of_district = st.number_input(f"Projected Total Election Turnout in percentage of {district} in {year}:")
 
 
-st.subheader("City Information:")
+st.subheader("Community Information:")
 population_of_city = st.number_input(f"Projected Population of {city} in {year}:")
 dem_election_turnout_of_city = st.number_input(f"Projected Democratic Election Turnout {city} in {year}:")
 #total_election_turnout_of_city = st.number_input(f"Projected Total Election Turnout {city} in {year}:")
@@ -70,6 +71,6 @@ if st.button("Calculate Impact:"):
 
 st.subheader("Results:")
 st.write(f"**Projected Democratic District Turnout in {year}:** {dem_district_turnout:.0f} voters")
-st.write(f"**Projected Democratic City Turnout in {year}:** {dem_city_turnout:.0f} voters")
-st.write(f"**City's Democratic Vote Share of District:** {dem_voting_share_of_city:.2f}%")
+st.write(f"**Projected Democratic Community Turnout in {year}:** {dem_city_turnout:.0f} voters")
+st.write(f"**Your Community's Share of District Democratic Win Target:** {dem_voting_share_of_city:.2f}%")
 st.write(f"**Democratic Votes Needed from Other Parts of the District to Win:** {voters_needed_from_elsewhere:.0f} votes")
