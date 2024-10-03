@@ -13,14 +13,15 @@ and Democratic vote counts, as well as Population estimates for the 2030
 House (Lower) and Senate (Upper) districts. The accuracy and reliability of 
 these predictions are expected to improve as new election data becomes 
 available and is integrated into the current dataset being fed into the 
-machine learning algorithm.
+machine learning algorithm. 
+
 I created two Tableau maps using .csv files created from merging the ML 
 model data and Census shapefile data. On these interactive maps, you will 
 be able to filter and/or hover over the districts to see the estimates 
 mentioned previously.
+
 You can find the code and files used for the Tableau maps here: 
-https://github.com/bluebonnet-teams/People-s-Action-Institute---People-s-
-Action-July-2024/tree/main/Project_2030
+https://github.com/bluebonnet-teams/People-s-Action-Institute---People-s-Action-July-2024/tree/main/Project_2030
 
 """
 st.markdown(multi)
