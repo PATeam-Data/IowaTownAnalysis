@@ -19,6 +19,7 @@ model data and Census shapefile data. On these interactive maps, you will
 be able to filter and/or hover over the districts to see the estimates 
 mentioned previously.
 """
+st.markdown(multi)
 
 st.subheader("District Analysis - Precinct Analysis:")
 multi = """
