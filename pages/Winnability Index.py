@@ -120,6 +120,24 @@ st.markdown("<hr style='border: 1px solid #2E2E2E;' />", unsafe_allow_html=True)
 
 st.subheader(" ")
 st.subheader("Winnability Index: CAFOs and Opposition Scoring")
+
+explanatory_text = """
+The first map displays a composite score for the Oppositional factors present in Iowa. The scores range from 1 to 4, with 1 indicating lower opposition and 4 indicating higher opposition.
+
+The scoring methodology is as follows:
+
+1. **For Pipelines:** 
+    - Counties with planned pipelines and ethanol production capacity receive a lower score (1).
+    - Counties where Anti-Pipeline Local Ordinances have been enacted and Litigation Initiated receive a higher score (4).
+2. **For CAFOs:** 
+    - The number of CAFOs in a county is categorized into quartiles. Counties in the higher quartiles receive a higher score in the composite.
+
+The second map places the CAFO facilities more granularly on top of their respective counties, which could help identify key towns in relation to the districts in the calculator.
+"""
+
+# Use a wide text box for the explanatory text
+st.markdown(f"<div style='background-color: #2E2E2E; color: white; padding: 20px; border-radius: 5px;'>{explanatory_text}</div>", unsafe_allow_html=True)
+
 # Embed the third Tableau visualization
 tableau_html_3 = """
 <div class='tableauPlaceholder' id='viz1727746523656' style='position: relative'>
