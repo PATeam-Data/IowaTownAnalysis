@@ -7,8 +7,18 @@ st.title("Iowa Town Analysis")
 st.write("Welcome to Bluebonnet's Iowa Town Analysis! Below you will find useful documentation of our product.")
 
 st.subheader("District Analysis:")
-
-####
+multi = """
+Using Python for Machine Learning, my objective was to predict the Total 
+and Democratic vote counts, as well as Population estimates for the 2030 
+House (Lower) and Senate (Upper) districts. The accuracy and reliability of 
+these predictions are expected to improve as new election data becomes 
+available and is integrated into the current dataset being fed into the 
+machine learning algorithm.
+I created two Tableau maps using .csv files created from merging the ML 
+model data and Census shapefile data. On these interactive maps, you will 
+be able to filter and/or hover over the districts to see the estimates 
+mentioned previously.
+"""
 
 st.subheader("District Analysis - Precinct Analysis:")
 multi = """
