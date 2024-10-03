@@ -18,6 +18,10 @@ I created two Tableau maps using .csv files created from merging the ML
 model data and Census shapefile data. On these interactive maps, you will 
 be able to filter and/or hover over the districts to see the estimates 
 mentioned previously.
+You can find the code and files used for the Tableau maps here: 
+https://github.com/bluebonnet-teams/People-s-Action-Institute---People-s-
+Action-July-2024/tree/main/Project_2030
+
 """
 st.markdown(multi)
 
@@ -64,24 +68,12 @@ Understanding the Results:
 
 A Further Explanation of the Calculations:
 
-Democratic District Turnout = (Population of District * Projected Democratic Election Turnout of District) / 100
-Democratic Community Turnout = (Population of Community * Projected Democratic Election Turnout of Community) / 100
-Democratic Vote Share of Community = (Democratic Community Turnout / Democratic District Turnout) * 100
-Democratic Votes Needed from Other Parts of the District to Win = (Democratic District Turnout - Democratic Community Turnout)
+1. Democratic District Turnout = (Population of District * Projected Democratic Election Turnout of District) / 100
+2. Democratic Community Turnout = (Population of Community * Projected Democratic Election Turnout of Community) / 100
+3. Democratic Vote Share of Community = (Democratic Community Turnout / Democratic District Turnout) * 100
+4. Democratic Votes Needed from Other Parts of the District to Win = (Democratic District Turnout - Democratic Community Turnout)
 
 """
 st.markdown(multi)
 
 ####
-
-st.subheader("Winnability Index:")
-
-####
-
-st.subheader("Winnability Index - CAFOs and Opposition Scoring:")
-
-multi = """
-The first map displays a composite score of data about the Oppositional factors present in Iowa. For pipelines, there is lower scoring (1) where there are planned pipelines and ethanol production capacity in a county and a higher scoring (4) when there has already been Anti-Pipeline Local Ordinances Enacted and Litigation Initiated. For CAFOs, the quartile of how many exist in a county factor into the composite score.
-The second map more granularly places the CAFO facilities on top of their counties. This could be useful for identifying key towns as they relate to the districts in the calculator.
-"""
-st.markdown(multi)
