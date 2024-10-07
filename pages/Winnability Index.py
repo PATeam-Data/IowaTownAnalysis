@@ -6,17 +6,16 @@ st.subheader("Winnability Index: Social Determinant Scoring")
 
 # Add the explanatory text in a wide text box
 explanatory_text = """
-This section presents scores for each county to assess the negative impact of social determinant issues. The scores range from 1 to 4, where 1 indicates the most significant negative impact and 4 represents the least negative impact.
+This section quantifies the impact various social determinant issues have on Iowa counties. Each county recieves a score ranging from 1 to 4 for each issue, where 1 indicates the most negative impact and 4 represents the least negative impact.
 
 
 The scoring methodology is as follows:
 
-1. For each metric within each category, we calculate the quantile for each county.
+1. For each metric within a category, we calculate the quantile each county is in.
 2. Each county receives a score for each metric based on its quantile ranking, with scores ranging from 1 to 4.
-3. For some metrics, a lower quantile indicates a worse situation. For instance, a higher percentage of uninsured adults is more concerning if a county falls into the first quantile rather than the fourth. As a result, counties in the first quantile for this metric receive a score of 4, while those in the fourth quantile receive a score of 1.
-4. Conversely, for metrics where a higher quantile is preferable, the scoring is reversed.
-5. After assigning scores for all metrics within a category, we average these scores to calculate the composite scores.
-6. Additionally, certain metrics are weighted more heavily than others within specific categories.
+3. For some metrics, a higher quantile indicates a worse situation. For instance, a county with a high percentage of uninsured adults may fall in the fourth quantile. Since a higher percentage of uninsured adults is negative, counties in the first quantile for this metric receive a score of 4, while those in the fourth quantile receive a score of 1.
+4. Conversely, for metrics where a higher quantile is postivie, the scoring is reversed.
+5. After assigning scores for all metrics within a category, we average these scores to calculate the composite scores. For some scores, the composite scores are weighted averages with some metrics within a category being weighted more than others.
 
 """
 
